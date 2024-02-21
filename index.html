@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Forca | NS</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="scripts/word-list.js" defer></script>
+    <script src="scripts/script.js" defer></script>
+</head>
+<body>
+    <div class="game-modal">
+        <div class="content">
+            <img src="img/lost.gif" alt="gif">
+            <h4>Game over!</h4>
+            <p>A palavra correta era: <b>piano</b></p>
+            <button class="play-again">Jogar Novamente</button>
+        </div>
+    </div>  
+
+    <div class="container">
+        <div class="hangman-box">
+            <img src="img/hangman-0.svg" alt="hangman-img">
+            <h1>Jogo da Forca </h1>
+        </div>
+        <div class="game-box">
+            <ul class="palavra-display"></ul>
+            <h4 class="dica-text">
+                Dica: <b>Lorem ipsum dolor sit amet consectetur adipisicing elit.</b>
+            </h4>
+            <h4 class="suposicoes-text">
+                Incorreto: <b>0 / 3</b>
+            </h4>
+            <div class="teclado"></div>
+            
+            <div id="chooseWordDiv">
+                <h2>Escolha uma categoria:</h2>
+                <select id="wordOptions" style="display: none;" onchange="escolherCategoria(this.value)">
+                    <optgroup label="Categorias">
+                        <option value="Instrumento musical">Instrumento musical</option>
+                        <option value="Comida">Comida</option>
+                        <option value="Planeta do sistema solar">Planeta do sistema solar</option>
+                        <option value="Gênero Musical">Gênero Musical</option>
+                        <option value="Animais">Animais</option>
+                        <option value="Clube de futebol">Clube de futebol</option>
+                        <option value="Fruta">Fruta</option>
+                        <option value="País da Ásia">País da Ásia</option>
+                        <option value="Um dos melhores e mais importantes rappers de todos os tempos">Cantor</option>
+                        <option value="Ex-jogador brasileiro">Jogador</option>
+                    </optgroup>
+                </select>
+                <p id="toggleOptionsBtn" onclick="toggleWordOptions()">Mostrar Categorias</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
